@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { invoke } from '@tauri-apps/api';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tauri-auto-linker';
+
+  constructor() {
+    invoke('greet', { name: "World" })
+      .then((res) => console.log(res))
+  }
 }
