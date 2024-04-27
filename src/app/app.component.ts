@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'tauri-auto-linker';
 
   constructor() {
-    invoke('greet', { name: "World" })
+    invoke('greet', { name: "Jonathan" })
       .then((res) => console.log(res))
   }
 }

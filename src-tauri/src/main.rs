@@ -8,7 +8,7 @@ fn main() {
     .expect("error while running tauri application");
 }
 
-#[tauri:command]
+#[tauri::command]
 fn greet(name: &str) -> String {
-  format!("Hello, {}!", name)
+  format!("Hello, {}!!!!!!", name)
 }
